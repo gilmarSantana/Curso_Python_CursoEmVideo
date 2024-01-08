@@ -8,6 +8,3 @@ valor_porcentagem = porcentagem_aumento / 100
 novo_salario = salario + (salario * valor_porcentagem)
 
 print('Você passou de ganhar {} para ganhar {}'.format(salario, novo_salario))
-
-
-
