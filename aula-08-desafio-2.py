@@ -24,9 +24,10 @@ sqrt_cat_adja = math.pow(cateto_oposto, 2)  # cateto_adjacente ** 2
 sum_catetos = sqrt_cat_opos + sqrt_cat_adja
 
 hipotenusa = math.sqrt(sum_catetos)
+hipontenusa = math.hypot(cateto_oposto, cateto_adjacente)
 
 print('A hipotenusa é {}'.format(hipotenusa))
-
+print('A hipontenusa é {}'.format(hipontenusa))
 print('=====' * 100)
 
 print(math.sqrt((cateto_adjacente ** 2) + (cateto_oposto ** 2)))
