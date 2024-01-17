@@ -3,7 +3,7 @@
 # foi o número escolhido pelo computador. O programa deverá escrever
 # na tela se o usuário venceu ou perdeu.
 
-import random
+import random, time
 
 correct_answer = False
 
@@ -11,6 +11,11 @@ aleatory_number = random.randint(1,5)
 
 while correct_answer is False:
     user_number_test = int(input('Adivinhe um número de 1 a 5: '))
+
+    for i in [1, 1, 1]:
+        print('Processando')
+        time.sleep(i)
+
     if aleatory_number != user_number_test:
         print('Resposta incorreta')
         print('-' * len('RAdivinhe um número de 1 a 5: '))
@@ -18,4 +23,3 @@ while correct_answer is False:
         print('Resposta correta.')
         correct_answer = True
 print('-' * 10, 'FIM DE JOGO', '-' * 10)
-
