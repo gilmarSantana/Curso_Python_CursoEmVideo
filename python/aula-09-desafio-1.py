@@ -19,3 +19,4 @@ print('O nome tem {} letras'.format(letras))
 nome_completo = nome_completo.split()
 print('O primeiro nome tem', len(nome_completo[0]), 'letras.')
 
+
