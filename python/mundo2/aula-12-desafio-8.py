@@ -5,3 +5,4 @@
 # Em até 2x no c.c. preço normal
 # 3x ou mais no c.c. 20% de juros
 
+condicao_pagamento = ''

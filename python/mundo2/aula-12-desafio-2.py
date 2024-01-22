@@ -8,24 +8,10 @@ numero = int(input('Numero: '))
 base = int(input('Base de conversão: '))
 
 if base == 1:
-    # Desenvolvido por Prô Terra - MakerZine
-    # Para mais detalhes, acesse: https://www.makerzine.com.br
-
-    numero_digitado = numero
-    quociente = 1
-    lista = []
-
-    while quociente >= 1:
-        resto = numero
-        lista.insert(0, resto)
-        quociente = numero // 2
-        numero = quociente
-
-    binario = ''.join([str(item) for item in lista])
-    print("O número", numero_digitado, ", quando convertido em binário, vale:", binario)
+    print("O número", numero, ", quando convertido em binário vale:\033[1;36;15m", bin(numero), '\033[m')
 elif base == 2:
-    pass
+    print("O número", numero, ", quando convertido em octal vale:\033[1;36;15m", oct(numero), '\033[m')
 elif base == 3:
-    pass
+    print("O número", numero, ", quando convertido em hexadecimal vale:\033[1;36;15m", hex(numero), '\033[m')
 else:
     pass
