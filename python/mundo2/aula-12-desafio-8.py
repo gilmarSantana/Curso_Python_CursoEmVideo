@@ -5,4 +5,28 @@
 # Em até 2x no c.c. preço normal
 # 3x ou mais no c.c. 20% de juros
 
-condicao_pagamento = ''
+condicao_pagamento = 'cc'
+valor_produto = 100.00
+valor_a_pagar = valor_produto
+parcelas = 4
+desconto = 0
+aumento = 0
+
+if condicao_pagamento == 'dinheiro' or condicao_pagamento == 'cheque' or condicao_pagamento == 'pix' or condicao_pagamento == 'debito':
+    desconto = valor_produto * (10 / 100)
+    aumento = 0
+    valor_a_pagar = valor_produto - desconto
+elif condicao_pagamento == 'cc':
+    if parcelas == 1:
+        desconto = valor_produto * (5 / 100)
+        aumento = 0
+        valor_a_pagar = valor_produto - desconto
+    elif parcelas == 2:
+        desconto = 0
+        aumento = 0
+    elif parcelas > 2:
+        desconto = 0
+        aumento = valor_produto * (20 / 100)
+        valor_a_pagar = valor_produto + aumento
+
+print(f'{valor_a_pagar:.2f}')
